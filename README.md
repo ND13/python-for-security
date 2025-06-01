@@ -61,6 +61,41 @@ An example of a parsed web log below:
 
 Now if I want to start analyzing fields I can just call them by name like user_agent, ip or referer. 
 
+
+---
+
+
+## IOC Checking Script (ioc_checker.py) ##
+Cool we parsed some logs and spit them into a dictionary but what can we do with them?
+
+Let's pretend we got some IOCs from some OSINT platform. Maybe we pulled it through an API (hmm, maybe we'll look at doing that next) or it got sent to us via some report/email.
+`"http://malicious-login.biz", "http://evil-phishing.com"` 
+
+Here are two domains which are associated with some kind of malicious activity. Lets say phishing attempts for credential harvesting. 
+
+Well now that our logs are parsed, we can go through them and see if we have any hits for these domains in our logging that might indicate if we're being used as part of some phishing campaign.
+
+For simplicity and the visual I've pasted all the parsed logs into a 'logs' variable in the ioc_checker.py script.
+
+What's nice about the parsing is we can access each log's referer value and check for the malicious domains.
+
+`for log in logs:
+    if log['referer'] in malicious_domains:
+        malicious_domain_count_dict[log['referer']] = malicious_domain_count_dict.get(log['referer'], 0) + 1 
+        print(f"Malicious domain: {log['referer']} observed in logs. Full log below\n ==={log}===:")`
+
+This simple loop lets us look at each log in the logs list, then access the referer key in each log and compare it to the list of malicious domains. If the 'referer' field matches any of the domains in the malicious_domains list, we'll add it to a separate dictionary to get count of how many times that domain appeared; and we'll also print out the domain that was found and it's associated log.
+
+An example of our output.
+`Malicious domain: http://malicious-login.biz observed in logs. Full log below
+ ==={'ip': '76.113.252.93', 'timestamp': '2025-05-23 22:45:59 -0700', 'method': 'POST /index.html HTTP/1.1', 'referer': 'http://malicious-login.biz', 'user_agent': 'Mozilla/5.0'}===:`
+
+What might this indicate to us? Well, if we're seeing these malicious domains in our referer field of our Apache logs that could mean users are being redirected to our legitimate website from phishing domains.
+
+Imagine you're a phisher looking for credentials and you create a fake login page imitating a legitimate website. You get someone to submit credentials to your phishing site and then you redirect them to the legitimate site after they submit to yours and have been successfully tricked into giving up their creds.
+
+It might be your customers accounts getting popped or your employees getting popped, so best to identify these things when you can and get the phishing sites reported/taken down. This is just one example of malicious domains appearing in your referer field of web server logs, they can be indicators of other sneaky activity too.
+
 ## Python Skills Required for Log Parsing Scripts
 Pretty much any intro to Python video will cover everything needed to create scripts like this. "Skills" used in this:
 - File I/O  
@@ -72,4 +107,6 @@ Pretty much any intro to Python video will cover everything needed to create scr
 - Date/Time Parsing
 - Data Structuring 
 - Basic Use of `shlex.split()` (for quoted strings)  
+
+
 
